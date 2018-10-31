@@ -7,6 +7,8 @@
     
 
 // Module headers:
+#include "emu-fd-net-device-helper.h"
 #include "fd-net-device-helper.h"
 #include "fd-net-device.h"
+#include "tap-fd-net-device-helper.h"
 #endif
