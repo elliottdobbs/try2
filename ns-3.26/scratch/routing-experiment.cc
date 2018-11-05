@@ -112,7 +112,7 @@ RoutingExperiment::RoutingExperiment ()
     packetsReceived (0),
     m_CSVfileName ("routing.output.csv"),
     m_traceMobility (false),
-    m_protocol (2) // AODV
+    m_protocol (1) // AODV
 {
 }
 
@@ -197,6 +197,9 @@ main (int argc, char *argv[])
   RoutingExperiment experiment;
   std::string CSVfileName = experiment.CommandSetup (argc,argv);
 
+  RngSeedManager::SetSeed(5);
+  RngSeedManager::SetRun(1);
+
   //blank out the last output file and write the column headers
   std::ofstream out (CSVfileName.c_str ());
   out << "SimulationSecond," <<
@@ -229,7 +232,7 @@ RoutingExperiment::Run (int nSinks, double txp, std::string CSVfileName)
   std::string phyMode ("DsssRate2Mbps");
   std::string tr_name ("routing-compare");
   int nodeSpeed = 10; //in m/s
-  int nodePause = 2; //in s
+  int nodePause = 20; //in s
   m_protocolName = "protocol";
 
   Config::SetDefault  ("ns3::OnOffApplication::PacketSize",StringValue ("64"));
