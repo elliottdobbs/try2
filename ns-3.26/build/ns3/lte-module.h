@@ -10,7 +10,6 @@
 #include "a2-a4-rsrq-handover-algorithm.h"
 #include "a3-rsrp-handover-algorithm.h"
 #include "cqa-ff-mac-scheduler.h"
-#include "emu-epc-helper.h"
 #include "epc-enb-application.h"
 #include "epc-enb-s1-sap.h"
 #include "epc-gtpu-header.h"
